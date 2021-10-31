@@ -8,14 +8,13 @@ function updateWord(element) {
     console.log("userWord is "+usersWord)
 }
 
-function handleSubmit() {
+function handleSubmit(newListItem) {
     let newListItem = document.createElement(`LI`)  
     newListItem.innerText = usersWord
-    if(usersWord.length % 2 === 0){
-        evenList.appendChild("newListItem")
-    }
-    else {
-        oddList.appendChild("newListItem")
+    if(usersWord.length % 2 === 0) {
+        evenList.appendChild(newListItem)
+    } else {
+        oddList.appendChild(newListItem)
     }
     usersWord = ""
     document.getElementById("even-odd-form").reset()
